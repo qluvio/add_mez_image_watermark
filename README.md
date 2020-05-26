@@ -8,7 +8,7 @@ Before running, set env vars PRIVATE_KEY and FABRIC_CONFIG_URL
 
 (substitute appropriate PRIVATE_KEY and FABRIC_CONFIG_URL below)
 
-For now, the image must be uploaded to the fabric separately in preparation. Once you have uploaded the image to the fabric, get the address/hash of the object and place in the "image" property of the sample_image_watermark.json file.
+For now, the image must be uploaded to the fabric separately in preparation. Once you have uploaded the image to the fabric, get the hash of the object substitute it and the image filename in the "image" property of the sample_image_watermark.json file.
 
 ```
 npm install
@@ -25,7 +25,7 @@ Example contents for WatermarkJsonFile:
 {
   "align_h": "bottom",
   "align_v": "right",
-  "image": "./logo.png",
+  "image": "/qfab/hq__C8vZUxtSdiW1zBKQWbUZVL6ZK3qctmiMVQ2XsQDfP3jqwQ2upKGPcg3DBd5dheMbepBrTDTLWi/files/watermark.png",
   "margin_h": "1/20",
   "margin_v": "1/10",
   "target_video_height": 1080
