@@ -1,0 +1,15 @@
+{
+  "name": "add_mez_image_watermark",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "elv-client-js": "git+https://github.com/eluv-io/elv-client-js.git#develop"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE.TXT"
+}
