@@ -1,21 +1,42 @@
 # add_mez_image_watermark
 
-Add an image overlay watermark to an existing ABR Mezzanine content object
+Add an image overlay watermark to an existing ABR Mezzanine content object, optionally creating a new offering based on an existing one.
 
 For best results, use an image in PNG format with a transparent background.
 
-Before running, set env vars PRIVATE_KEY and FABRIC_CONFIG_URL
+Before running, set env var PRIVATE_KEY
 
-(substitute appropriate PRIVATE_KEY and FABRIC_CONFIG_URL below)
+(substitute appropriate PRIVATE_KEY below)
 
 
 ```
 npm install
 
 export PRIVATE_KEY=0x0000000000000000000000000000000000000000000000000000000000000000
-export FABRIC_CONFIG_URL="https://main.net955210.contentfabric.io/config" # (for Eluvio test network)
 
-node add_mez_image_watermark.js mezLibId mezObjectId pathToWatermarkJsonFile
+node add_mez_image_watermark.js --libraryId mezLibId --objectId mezObjectId --watermarkSpec pathToWatermarkJsonFile --configUrl fabricConfigUrl
+```
+
+```
+Options:
+  --help           Show help                                           [boolean]
+  --libraryId      Library ID of the mezzanine                        [required]
+  --objectId       Object ID of the mezzanine                         [required]
+  --watermarkSpec  path pointing to json file with image watermark details
+                                                             [string] [required]
+  --configUrl      URL pointing to the Fabric configuration. i.e.
+                   https://main.net955210.contentfabric.io/config (for 'test'
+                   network)                                  [string] [required]
+  --offeringKey    Offering key to add watermark to (if key does not exist, it
+                   will be created, using either 'default' offering as template,
+                   or offering identified by --copy-offering option)
+                                                   [string] [default: "default"]
+  --copyOffering   Specify an existing offering to copy metadata metadata from
+                                                                        [string]
+  --debug          Print out client debug log messages[boolean] [default: false]
+
+Usage: PRIVATE_KEY=<private-key> node add_mez_image_watermark.js --libraryId <mezzanine-library-id> --objectId <mezzanine-object-id> --watermarkSpec <path to WatermarkJsonFile> --configUrl "<fabric-config-url>" (--offeringKey <new-or-existing-key>) (--copyOffering <existing-key>)  (--debug)
+
 ```
 
 ---
