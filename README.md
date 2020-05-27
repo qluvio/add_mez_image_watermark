@@ -23,8 +23,8 @@ Example contents for WatermarkJsonFile:
 
 ```
 {
-  "align_h": "bottom",
-  "align_v": "right",
+  "align_h": "right",
+  "align_v": "bottom",
   "image": "/qfab/hq__C8vZUxtSdiW1zBKQWbUZVL6ZK3qctmiMVQ2XsQDfP3jqwQ2upKGPcg3DBd5dheMbepBrTDTLWi/files/watermark.png",
   "margin_h": "1/20",
   "margin_v": "1/10",
